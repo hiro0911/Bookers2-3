@@ -1,0 +1,21 @@
+<%= render partial: "users/user_info", user: @user, book: @book %>
+
+<div class="col-xs-9">
+  <h2>Book detail</h2>
+  <table class="table">
+    <tbody><tr>
+      <td><%= link_to user_path(@user) do %>
+        <%= attachment_image_tag @user, :profile_image, size: "50x50", fallback: "no_image", class: "attachment user profile_image fallback" %><br>
+        <%= @user.name %>
+      </td>
+      <% end %>
+      <td><%= link_to @book2.title, book_path(@book2) %></td>
+      <td><%= @book2.body %></td>
+      <td><%= link_to "Edit", edit_book_path(@book2), class: "btn btn-success" %></td>
+      <td><%= link_to "Destroy", "/books/#{@book2.id}", method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-danger" %></td>
+    </tr>
+  </tbody></table>
+</div>
+</div>
+</div>
+</div>
