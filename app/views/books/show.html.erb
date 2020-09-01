@@ -11,8 +11,10 @@
       <% end %>
       <td><%= link_to @book2.title, book_path(@book2) %></td>
       <td><%= @book2.body %></td>
+      <% if @book2.user == current_user %>
       <td><%= link_to "Edit", edit_book_path(@book2), class: "btn btn-success" %></td>
       <td><%= link_to "Destroy", "/books/#{@book2.id}", method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-danger" %></td>
+      <% end %>
     </tr>
   </tbody></table>
 </div>

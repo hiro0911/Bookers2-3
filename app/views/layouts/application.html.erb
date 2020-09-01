@@ -16,6 +16,12 @@
   <%= render partial: 'layouts/header_logout' %>
   <% end %>
 
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+
   <%= yield %>
 </body>
 
